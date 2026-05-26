@@ -1,0 +1,54 @@
+/*
+Autore: BT
+Nome Sito: Ricette di Casa
+Versione: 1.0
+*/
+
+/*====================================
+[indice CSS]
+
+1. Generali
+2. Tipografia
+
+
+10. Footer
+
+======================================*/
+
+/*-------------------------------------
+	1.Generali
+------------------------------------*/
+
+@font-face{
+	font-family: "Adventpro";
+	src: url("../fonts/adventpro.woff2") format("woff2");
+	src: url("../fonts/adventpro.woff") format("woff");
+	src: url("../fonts/adventpro.otf") format("opentype");
+	src: url("../fonts/adventpro.ttf")format("truetype");
+	src: url("../fonts/adventpro.svg") format("svg");
+}
+header, footer{
+	border-radius: 10px;
+}
+
+/*-------------------------------------
+	2.Tipografia
+------------------------------------*/
+li:hover{
+	color: #e85d04;	
+}
+
+aside:hover{
+	color: #9d8189;
+}
+
+hgroup:hover{
+	color: #d00000;
+}
+
+/*-------------------------------------
+	10. Footer
+------------------------------------*/
+.policy-menu li{
+	list-style-type: none;
+}
