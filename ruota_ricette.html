@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>La ruota della decisione</title>
+        <link rel="stylesheet" href="main.css" />
+    </head>
+
+    <body>
+        <div class="container">
+        <div class="spinBtn">Spin</div>
+        <div class="wheel">
+            <span style="--i:0;"></span>
+            <span style="--i:1;"></span>
+            <span style="--i:2;"></span>
+            <span style="--i:3;"></span>
+            <span style="--i:4;"></span>
+            <div class="number">
+                <b style="--i:0;">pasta al pesto</b>
+                <b style="--i:1;">pasta al ragù</b>
+                <b style="--i:2;">pasta con tonno</b>
+                <b style="--i:3;">pasta aglio <br/> olio e <br/> peperoncino</b>
+                <b style="--i:4;">pasta con <br/>zucchine,<br/> speck<br/> e ricotta</b>
+                <b style="--i:5;">gnocchi burro<br/> e salvia</b>
+                <b style="--i:6;">pasta al latte<br/> e carote</b>
+                <b style="--i:7;">risotto</b>
+            </div>
+        </div>
+        <div class="wheel inner">
+            <span style="--i:0;"></span>
+            <span style="--i:1;"></span>
+            <span style="--i:2;"></span>
+            <span style="--i:3;"></span>
+            <span style="--i:4;"></span>
+            <div class="number">
+                <b style="--i:0;">mozzarella</b>
+                <b style="--i:1;">costate</b>
+                <b style="--i:2;">patate<br/>lesse<br/>tonno</b>
+                <b style="--i:3;">minestra</b>
+                <b style="--i:4;">pesce</b>
+                <b style="--i:5;">uova</b>
+                <b style="--i:6;">frittata</b>
+                <b style="--i:7;">legumi</b>
+            </div>
+        </div>
+        </div>
+        <script>
+        let wheel = document.querySelector('.wheel');
+        let inner = document.querySelector('.inner');
+        let spinBtn = document.querySelector('.spinBtn');
+
+        let value1 = Math.ceil(Math.random() * -3600);
+        let value2 = Math.ceil(Math.random() * 3600);
+
+        spinBtn.onclick = function(){
+            wheel.style.transform = "rotate("+ value1 +"deg)";
+            inner.style.transform = "rotate("+ value2 +"deg)";
+            value1 += Math.ceil(Math.random() * -3600);
+            value2 += Math.ceil(Math.random() * 3600);
+        }
+
+    </script>
+    </body>
+    </html>
